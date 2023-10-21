@@ -1,10 +1,9 @@
-package gpulenta.quipu.userservice.repository;
+package gpulenta.quipu.user.repository;
 
-import gpulenta.quipu.userservice.model.User;
+import gpulenta.quipu.user.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 import java.util.Optional;
 
 @Repository

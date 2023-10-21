@@ -1,6 +1,6 @@
-package gpulenta.quipu.userservice.service;
+package gpulenta.quipu.user.service;
 
-import gpulenta.quipu.userservice.model.User;
+import gpulenta.quipu.user.model.User;
 
 import java.util.List;
 
