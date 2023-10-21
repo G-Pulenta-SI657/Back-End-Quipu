@@ -1,0 +1,36 @@
+server:
+  port: 8095
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/offer_db
+    username: root
+    password: admin123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQLDialect
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8099/eureka/
+
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      slidingWindowSize: 10
+      minimumNumberOfCalls: 5
+      permittedNumberOfCallsInHalfOpenState: 3
+      waitDurationInOpenState: 10000
+      failureRateThreshold: 50
+  instances:
+    myCircuitBreaker:
+      baseConfig: default
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
