@@ -6,7 +6,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/u201817461/Backend-Prueba.git
+          uri: https://github.com/G-Pulenta-SI657/Back-End-Quipu.git
           searchPaths: config-data
           username: ${GIT_USER}
           password: ${GIT_PASSWORD}
