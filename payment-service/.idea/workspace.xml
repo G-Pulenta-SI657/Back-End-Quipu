@@ -4,14 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="831318b7-6c51-4641-8053-3c86d303651a" name="Changes" comment="Fix: Gradle Properties for Payment">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    <list default="true" id="831318b7-6c51-4641-8053-3c86d303651a" name="Changes" comment="Fix: Payment Properties Fixed">
+      <change afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.2.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.2.1/dependencies-accessors/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.2.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/gpulenta/quipu/payment/PaymentServiceApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/gpulenta/quipu/payment/client/Resilience4jConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/gpulenta/quipu/payment/client/UserClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/gpulenta/quipu/payment/controller/PaymentController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/gpulenta/quipu/payment/model/Payment$PaymentBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/gpulenta/quipu/payment/model/Payment.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/gpulenta/quipu/payment/model/User$UserBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/gpulenta/quipu/payment/model/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/gpulenta/quipu/payment/repository/PaymentRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/gpulenta/quipu/payment/service/PaymentService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/gpulenta/quipu/payment/service/impl/PaymentServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +59,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -69,7 +95,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698241711386</updated>
-      <workItem from="1698245100372" duration="417000" />
+      <workItem from="1698245100372" duration="647000" />
     </task>
     <task id="LOCAL-00001" summary="Fix: Gradle Properties for Payment">
       <option name="closed" value="true" />
@@ -79,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698245336253</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fix: Payment Properties Fixed">
+      <option name="closed" value="true" />
+      <created>1698245739762</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698245739762</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,6 +121,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix: Gradle Properties for Payment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: Gradle Properties for Payment" />
+    <MESSAGE value="Fix: Payment Properties Fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: Payment Properties Fixed" />
   </component>
 </project>
