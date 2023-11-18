@@ -1,5 +1,7 @@
 server:
   port: 8095
+user:
+  property: = User Profile Developer Edition
 
 spring:
   datasource:

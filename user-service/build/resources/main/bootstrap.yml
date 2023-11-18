@@ -1,12 +1,38 @@
+server:
+  port: 80
+
 spring:
   application:
     name: user-service
-  cloud:
-    config:
-      uri: http://localhost:8081
-      username: root
-      password: admin123
-  boot:
-    admin:
-      client:
-        url: http://localhost:8086
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "jdbc:mysql://quipu-users.mysql.database.azure.com:3306/user_db?useSSL=true"
+    username: quipu_user
+    password: Admin123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: https://quipu-microservice-quipu-registry.azuremicroservices.io/eureka/
+
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      slidingWindowSize: 10
+      minimumNumberOfCalls: 5
+      permittedNumberOfCallsInHalfOpenState: 3
+      waitDurationInOpenState: 10000
+      failureRateThreshold: 50
+  instances:
+    myCircuitBreaker:
+      baseConfig: default
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
