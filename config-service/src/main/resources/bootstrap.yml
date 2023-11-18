@@ -1,17 +1,12 @@
 server:
   port: 8081
-
 spring:
+  application:
+    name: config-service
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/G-Pulenta-SI657/Back-End-Quipu.git
-          searchPaths: config-data
-          username: ${GIT_USER}
-          password: ${GIT_PASSWORD}
-          default-label: develop
-  security:
-    user:
-      name: root
-      password: admin123
+          uri: https://github.com/G-Pulenta-SI657/Config-data.git
+          default-label: main
+          clone-on-start: true

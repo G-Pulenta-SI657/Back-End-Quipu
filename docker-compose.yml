@@ -1,0 +1,106 @@
+version: '3.7'
+
+services:
+  config-service:
+    image: lucasbenedetti/quipu:config-service
+    container_name: config-service
+    ports:
+      - "8081:8081"
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://config-service:8081/actuator/health" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+    - quipu_network
+
+  registry-service:
+    image: lucasbenedetti/quipu:registry-service
+    container_name: registry-service
+    ports:
+      - "8099:8099"
+    depends_on:
+      config-service:
+        condition: service_healthy
+    networks:
+      - quipu_network
+
+  user-service:
+    image: lucasbenedetti/quipu:user-service
+    container_name: user-service
+    ports:
+      - "8091:8091"
+    depends_on:
+      config-service:
+        condition: service_healthy
+    networks:
+      - quipu_network
+
+  offer-service:
+    image: lucasbenedetti/quipu:offer-service
+    container_name: offer-service
+    ports:
+      - "8095:8095"
+    depends_on:
+      config-service:
+        condition: service_healthy
+    networks:
+      - quipu_network
+
+  payment-service:
+    image: lucasbenedetti/quipu:payment-service
+    container_name: payment-service
+    ports:
+      - "8093:8093"
+    depends_on:
+      config-service:
+        condition: service_healthy
+    networks:
+      - quipu_network
+
+  shoppingcart-service:
+    image: lucasbenedetti/quipu:shoppingcart-service
+    container_name: shoppingcart-service
+    ports:
+      - "8094:8094"
+    depends_on:
+      config-service:
+        condition: service_healthy
+    networks:
+      - quipu_network
+
+  product-service:
+    image: lucasbenedetti/quipu:product-service
+    container_name: product-service
+    ports:
+      - "8090:8090"
+    depends_on:
+      config-service:
+        condition: service_healthy
+    networks:
+      - quipu_network
+
+  admin-service:
+    image: lucasbenedetti/quipu:admin-service
+    container_name: admin-service
+    ports:
+      - "8086:8086"
+    depends_on:
+      config-service:
+        condition: service_healthy
+    networks:
+      - quipu_network
+
+  gateway-service:
+    image: lucasbenedetti/quipu:gateway-service
+    container_name: gateway-service
+    ports:
+      - "8080:8080"
+    depends_on:
+      config-service:
+        condition: service_healthy
+    networks:
+      - quipu_network
+
+networks:
+  quipu_network:
