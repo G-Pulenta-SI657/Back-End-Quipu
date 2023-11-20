@@ -102,5 +102,16 @@ services:
     networks:
       - quipu_network
 
+  trip-service:
+    image: lucasbenedetti/trip-service
+    container_name: trip-service
+    ports:
+      - "8092:8092"
+    depends_on:
+      config-service:
+        condition: service_healthy
+    networks:
+      - quipu_network
+
 networks:
   quipu_network:
