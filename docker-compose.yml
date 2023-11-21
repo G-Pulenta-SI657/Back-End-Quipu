@@ -47,8 +47,8 @@ services:
     networks:
       - quipu_network
 
-  payment-service:
-    image: lucasbenedetti/quipu:payment-service
+   payment-service:
+    image: lucasbenedetti/payment-service
     container_name: payment-service
     ports:
       - "8093:8093"
